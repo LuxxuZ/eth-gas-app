@@ -8,24 +8,43 @@ const URL =
 
 function Home() {
   const [data, setData] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [firstLoading, setFirstLoading] = useState(true);
+  const [fetching, setFetching] = useState(false);
 
   async function apiCall() {
-    await fetch(URL)
+    return await fetch(URL)
       .then((res) => {
         return res.json();
       })
       .then((res) => {
-        const dataApi = res;
-        setData(dataApi);
-        console.log(res);
-        setLoading(false);
+        setData(res);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }
 
+  async function loadInitialData() {
+    await apiCall().then(() => {
+      setFirstLoading(false);
+    });
+  }
+
+  async function reloadData() {
+    await apiCall().then(() => {
+      setFetching(false);
+    });
+  }
+
   useEffect(() => {
-    apiCall();
-  }, [loading]);
+    if (firstLoading) {
+      return loadInitialData();
+    }
+    setInterval(() => {
+      setFetching(true);
+      reloadData();
+    }, 20000);
+  }, [firstLoading]);
 
   return (
     <Fragment>
@@ -34,19 +53,22 @@ function Home() {
         <GasContainer
           speed="Slow"
           value={data.safeLow}
-          loading={loading}
+          firstLoading={firstLoading}
+          fetching={fetching}
           color="blue"
         />
         <GasContainer
           speed="Medium"
           value={data.average}
-          loading={loading}
+          firstLoading={firstLoading}
+          fetching={fetching}
           color="green"
         />
         <GasContainer
           speed="Fast"
           value={data.fast}
-          loading={loading}
+          firstLoading={firstLoading}
+          fetching={fetching}
           color="orange"
         />
       </div>
