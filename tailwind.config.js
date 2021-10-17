@@ -1,6 +1,6 @@
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     textIndent: {
       // defaults to {}
@@ -174,6 +174,12 @@ module.exports = {
         cblue: "#17DBE8",
         bcwhite: "#FCFCFC",
         tcwhite: "#FFFFFF",
+        ////////DARK MODE/////////////////////////////////////////////////////////////
+        cbodydark: "#121212",
+        chgdark: "#1E1E1E",
+        cgreendark: "#03F11B",
+        cpurpledark: "#702EFF",
+        cbluedark: "#04B4FF",
       },
       fontSize: {
         cxl: "56px",
@@ -197,6 +203,14 @@ module.exports = {
     fontVariantNumeric: ["responsive"],
     fontVariantLigatures: ["responsive"],
     textRendering: ["responsive"],
+    boxShadow: [
+      "responsive",
+      "group-hover",
+      "focus-within",
+      "hover",
+      "focus",
+      "dark",
+    ],
     extend: {},
   },
   plugins: [

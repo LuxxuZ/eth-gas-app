@@ -49,13 +49,14 @@ function Home() {
   return (
     <Fragment>
       <Header />
-      <div className="flex flex-col md:flex-row w-full min-h-screen py-8 md:py-0 pt-28 md:pt-0 justify-around items-center">
+      <div className="dark:bg-cbodydark flex flex-col md:flex-row w-full min-h-screen py-8 md:py-0 pt-28 md:pt-0 justify-around items-center">
         <GasContainer
           speed="Slow"
           value={data.safeLow}
           firstLoading={firstLoading}
           fetching={fetching}
           color="blue"
+          darkColor="purple"
         />
         <GasContainer
           speed="Medium"
@@ -63,6 +64,7 @@ function Home() {
           firstLoading={firstLoading}
           fetching={fetching}
           color="green"
+          darkColor="blue"
         />
         <GasContainer
           speed="Fast"
@@ -70,6 +72,7 @@ function Home() {
           firstLoading={firstLoading}
           fetching={fetching}
           color="orange"
+          darkColor="green"
         />
       </div>
     </Fragment>
