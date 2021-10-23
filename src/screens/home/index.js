@@ -1,7 +1,10 @@
 import "./styles.css";
 import Header from "../../components/Header";
-import GasContainer from "../../components/GasContainer";
+import GasCard from "../../components/GasCard";
 import { Fragment, useEffect, useState } from "react";
+import { GiSnail } from "react-icons/gi";
+import { IoRocketSharp } from "react-icons/io5";
+import { TiMinus } from "react-icons/ti";
 
 const URL =
   "https://data-api.defipulse.com/api/v1/egs/api/ethgasAPI.json?api-key=6cce794794066efbf7c860f6300b2b37ca8135d49ab5758a570c3ffb2bcc";
@@ -50,29 +53,38 @@ function Home() {
     <Fragment>
       <Header />
       <div className="dark:bg-cbodydark flex flex-col md:flex-row w-full min-h-screen py-8 md:py-0 pt-28 md:pt-0 justify-around items-center">
-        <GasContainer
-          speed="Slow"
+        <GasCard
+          speed="Safe Slow"
           value={data.safeLow}
+          time="30"
+          money="0.16"
           firstLoading={firstLoading}
           fetching={fetching}
           color="blue"
           darkColor="purple"
+          Icon={GiSnail}
         />
-        <GasContainer
+        <GasCard
           speed="Medium"
           value={data.average}
+          time="5"
+          money="0.16"
           firstLoading={firstLoading}
           fetching={fetching}
           color="green"
           darkColor="blue"
+          Icon={TiMinus}
         />
-        <GasContainer
+        <GasCard
           speed="Fast"
           value={data.fast}
+          time="2"
+          money="0.33"
           firstLoading={firstLoading}
           fetching={fetching}
           color="orange"
           darkColor="green"
+          Icon={IoRocketSharp}
         />
       </div>
     </Fragment>

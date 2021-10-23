@@ -1,13 +1,14 @@
-import gasVumpLogo from "../../images/gas-vump.svg";
 import ToggleButton from "../ToggleButton";
-import { MdLocalGasStation } from "react-icons/md";
+import { FaGasPump } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <div className="dark:shadow bg-gray-50 dark:bg-chgdark shadow-hsw w-full h-20 flex flex-row items-center fixed px-4 z-20">
+    <div className="bg-tcwhite dark:bg-cbodydark w-full h-28 flex flex-row items-center fixed px-9 z-20 pt-2">
       <div className="flex flex-row items-end">
-        <MdLocalGasStation className="w-10 h-10 inset-x-0 bottom-0 dark:text-white" />
-        <h1 className="dark:text-white ml-1 text-xl font-light select-none">
+        <div className="bg-gray-100 dark:bg-cnavdark flex items-center justify-center w-16 h-16 rounded-2xl">
+          <FaGasPump className="w-8 h-8 dark:text-white" />
+        </div>
+        <h1 className="dark:text-white text-xl select-none ml-3">
           ETH Gas Gwei
         </h1>
       </div>

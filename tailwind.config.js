@@ -2,184 +2,41 @@ module.exports = {
   purge: [],
   darkMode: "class", // or 'media' or 'class'
   theme: {
-    textIndent: {
-      // defaults to {}
-      1: "0.25rem",
-      2: "0.5rem",
-    },
-    textShadow: {
-      // defaults to {}
-      default: "0 2px 5px rgba(0, 0, 0, 0.5)",
-      lg: "0 2px 10px rgba(0, 0, 0, 0.5)",
-    },
-    textDecorationStyle: {
-      // defaults to these values
-      solid: "solid",
-      double: "double",
-      dotted: "dotted",
-      dashed: "dashed",
-      wavy: "wavy",
-    },
-    textDecorationColor: {
-      // defaults to theme => theme('colors')
-      red: "#f00",
-      green: "#0f0",
-      blue: "#00f",
-    },
-    fontVariantCaps: {
-      // defaults to these values
-      normal: "normal",
-      small: "small-caps",
-      "all-small": "all-small-caps",
-      petite: "petite-caps",
-      unicase: "unicase",
-      titling: "titling-caps",
-    },
-    fontVariantNumeric: {
-      // defaults to these values
-      normal: "normal",
-      ordinal: "ordinal",
-      "slashed-zero": "slashed-zero",
-      lining: "lining-nums",
-      oldstyle: "oldstyle-nums",
-      proportional: "proportional-nums",
-      tabular: "tabular-nums",
-      "diagonal-fractions": "diagonal-fractions",
-      "stacked-fractions": "stacked-fractions",
-    },
-    fontVariantLigatures: {
-      // defaults to these values
-      normal: "normal",
-      none: "none",
-      common: "common-ligatures",
-      "no-common": "no-common-ligatures",
-      discretionary: "discretionary-ligatures",
-      "no-discretionary": "no-discretionary-ligatures",
-      historical: "historical-ligatures",
-      "no-historical": "no-historical-ligatures",
-      contextual: "contextual",
-      "no-contextual": "no-contextual",
-    },
-    textRendering: {
-      // defaults to these values
-      "rendering-auto": "auto",
-      "optimize-legibility": "optimizeLegibility",
-      "optimize-speed": "optimizeSpeed",
-      "geometric-precision": "geometricPrecision",
-    },
-    textStyles: (theme) => ({
-      // defaults to {}
-      heading: {
-        output: false, // this means there won't be a "heading" component in the CSS, but it can be extended
-        fontWeight: theme("fontWeight.bold"),
-        lineHeight: theme("lineHeight.tight"),
-      },
-      h1: {
-        extends: "heading", // this means all the styles in "heading" will be copied here; "extends" can also be an array to extend multiple text styles
-        fontSize: theme("fontSize.5xl"),
-        "@screen sm": {
-          fontSize: theme("fontSize.6xl"),
-        },
-      },
-      h2: {
-        extends: "heading",
-        fontSize: theme("fontSize.4xl"),
-        "@screen sm": {
-          fontSize: theme("fontSize.5xl"),
-        },
-      },
-      h3: {
-        extends: "heading",
-        fontSize: theme("fontSize.4xl"),
-      },
-      h4: {
-        extends: "heading",
-        fontSize: theme("fontSize.3xl"),
-      },
-      h5: {
-        extends: "heading",
-        fontSize: theme("fontSize.2xl"),
-      },
-      h6: {
-        extends: "heading",
-        fontSize: theme("fontSize.xl"),
-      },
-      link: {
-        fontWeight: theme("fontWeight.bold"),
-        color: theme("colors.blue.400"),
-        "&:hover": {
-          color: theme("colors.blue.600"),
-          textDecoration: "underline",
-        },
-      },
-      richText: {
-        fontWeight: theme("fontWeight.normal"),
-        fontSize: theme("fontSize.base"),
-        lineHeight: theme("lineHeight.relaxed"),
-        "> * + *": {
-          marginTop: "1em",
-        },
-        h1: {
-          extends: "h1",
-        },
-        h2: {
-          extends: "h2",
-        },
-        h3: {
-          extends: "h3",
-        },
-        h4: {
-          extends: "h4",
-        },
-        h5: {
-          extends: "h5",
-        },
-        h6: {
-          extends: "h6",
-        },
-        ul: {
-          listStyleType: "disc",
-        },
-        ol: {
-          listStyleType: "decimal",
-        },
-        a: {
-          extends: "link",
-        },
-        "b, strong": {
-          fontWeight: theme("fontWeight.bold"),
-        },
-        "i, em": {
-          fontStyle: "italic",
-        },
-      },
-    }),
-
     extend: {
-      textShadow: {
-        gsw: "0 2px 2px rgba(0, 0, 0, 0.25)",
-        "2gsw": "0 2px 4px rgba(0, 0, 0, 0.25)",
-      },
       margin: {
         "50p": "50%",
       },
       boxShadow: {
         hsw: "0 3px 40px 0 rgba(0, 0, 0, 0.1)",
-        csw: "0 16px 35px 4px rgba(0, 0, 0, 0.08)",
+        csw: "0 4px 15px 0 rgba(0, 0, 0, 0.18)",
         nsw: "0 2px 2px rgba(0, 0, 0, 0.25)",
       },
       colors: {
-        cgreen: "#0CD907",
-        corange: "#FF3D00",
-        cblue: "#17DBE8",
+        cgreen: "#219F2D",
+        corange: "#FD9255",
+        cblue: "#3F6CE1",
         bcwhite: "#FCFCFC",
         tcwhite: "#FFFFFF",
-        ////////DARK MODE/////////////////////////////////////////////////////////////
+        //////////////////////DARK MODE////////////////////////
+        ctwhite: "#F6F6F6",
+        cstwhite: "#E2E2E2",
         cbodydark: "#121212",
-        chgdark: "#1E1E1E",
-        cgreendark: "#03F11B",
-        cpurpledark: "#702EFF",
-        cbluedark: "#04B4FF",
+        chgdark: "#1D1D1D",
+        cnavdark: "#1D1D1D",
+        cgreendark: "#00ec15",
+        cpurpledark: "#9248F5",
+        cbluedark: "#09bffc",
+        csoftbluedark: "#abe3fe",
+        csoftpurpledark: "#B39DDB",
+        csoftgreendark: "#bafcc5",
+        loadingdark: "#262626",
+        ////////////////////CARD COLORS///////////////////////
+        ctblack: "#0F0F0F",
+        cstgray: "#3A3A3A",
+        csoftgreen: "#AEF2B4",
+        csoftblue: "#DAE3FA",
+        csoftorange: "#FAD9C7",
+        cbwhite: "#D7D7D7",
       },
       fontSize: {
         cxl: "56px",
@@ -190,19 +47,6 @@ module.exports = {
     },
   },
   variants: {
-    // all the following default to ['responsive']
-    textIndent: ["responsive"],
-    textShadow: ["responsive"],
-    textDecorationStyle: ["responsive"],
-    textDecorationColor: ["responsive"],
-    ellipsis: ["responsive"],
-    hyphens: ["responsive"],
-    kerning: ["responsive"],
-    textUnset: ["responsive"],
-    fontVariantCaps: ["responsive"],
-    fontVariantNumeric: ["responsive"],
-    fontVariantLigatures: ["responsive"],
-    textRendering: ["responsive"],
     boxShadow: [
       "responsive",
       "group-hover",
@@ -213,14 +57,5 @@ module.exports = {
     ],
     extend: {},
   },
-  plugins: [
-    require("tailwindcss-typography")({
-      // all these options default to the values specified here
-      ellipsis: true, // whether to generate ellipsis utilities
-      hyphens: true, // whether to generate hyphenation utilities
-      kerning: true, // whether to generate kerning utilities
-      textUnset: true, // whether to generate utilities to unset text properties
-      componentPrefix: "c-", // the prefix to use for text style classes
-    }),
-  ],
+  plugins: [],
 };
