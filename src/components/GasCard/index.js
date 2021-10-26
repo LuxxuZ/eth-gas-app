@@ -1,3 +1,6 @@
+import { getGweiUsd } from "../../utilities/gwei-usd";
+import { gweiUsdFmt } from "../../utilities/eth-info";
+
 export default function GasCard({
   speed,
   value,
@@ -6,9 +9,12 @@ export default function GasCard({
   fetching,
   darkColor,
   time,
-  money,
+  ethPrice,
   Icon,
 }) {
+  const gweiValue = value / 10;
+  const gweiUsd = getGweiUsd({ gWeiCount: gweiValue, ethPrice });
+
   if (firstLoading) {
     return (
       <div className="bg-tcwhite dark:bg-chgdark flex md:flex-col flex-row w-96 h-56 rounded-lg shadow-csw dark:shadow-none border border-cbwhite dark:border-transparent pt-8 pl-8">
@@ -42,7 +48,7 @@ export default function GasCard({
             {speed}
           </h1>
           <div className="flex flex-row pt-4 items-end">
-            <p className={`text-5xl font-bold text-c${color}`}>{value / 10}</p>
+            <p className={`text-5xl font-bold text-c${color}`}>{gweiValue}</p>
             <p className="pl-1 text-2xl text-cstgray dark:text-cstwhite select-none">
               Gwei
             </p>
@@ -62,7 +68,7 @@ export default function GasCard({
         </p>
         <p className="text-lg text-ctblack dark:text-ctwhite">
           {"<"}
-          {time} Minutes | ${money}
+          {time} Minutes | {gweiUsdFmt(gweiUsd)}
         </p>
       </div>
     </div>
