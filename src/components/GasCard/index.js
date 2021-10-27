@@ -7,7 +7,7 @@ export default function GasCard({
   color,
   firstLoading,
   fetching,
-  darkColor,
+  softColor,
   time,
   ethPrice,
   Icon,
@@ -48,7 +48,7 @@ export default function GasCard({
             {speed}
           </h1>
           <div className="flex flex-row pt-4 items-end">
-            <p className={`text-5xl font-bold text-c${color}`}>{gweiValue}</p>
+            <p className={`text-5xl font-bold ${color}`}>{gweiValue}</p>
             <p className="pl-1 text-2xl text-cstgray dark:text-cstwhite select-none">
               Gwei
             </p>
@@ -56,9 +56,9 @@ export default function GasCard({
         </div>
         <div className="flex w-full justify-end pr-8">
           <div
-            className={`rounded-full w-16 h-16 bg-csoft${color} flex items-center justify-center `}
+            className={`rounded-full w-16 h-16 ${softColor} flex items-center justify-center `}
           >
-            <Icon className={`w-9 h-9 text-c${color}`} />
+            <Icon className={`w-9 h-9 ${color}`} />
           </div>
         </div>
       </div>

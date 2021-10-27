@@ -68,8 +68,8 @@ function Home() {
             ethPrice={ethPrice}
             firstLoading={firstLoading}
             fetching={fetching}
-            color="blue"
-            darkColor="purple"
+            color="text-cblue"
+            softColor="bg-csoftblue"
             Icon={GiSnail}
           />
           <GasCard
@@ -79,8 +79,8 @@ function Home() {
             ethPrice={ethPrice}
             firstLoading={firstLoading}
             fetching={fetching}
-            color="green"
-            darkColor="blue"
+            color="text-cgreen"
+            softColor="bg-csoftgreen"
             Icon={TiMinus}
           />
           <GasCard
@@ -90,8 +90,8 @@ function Home() {
             ethPrice={ethPrice}
             firstLoading={firstLoading}
             fetching={fetching}
-            color="orange"
-            darkColor="green"
+            color="text-corange"
+            softColor="bg-csoftorange"
             Icon={IoRocketSharp}
           />
         </div>
