@@ -25,7 +25,7 @@ function Home() {
         const gweiData = responses[0] || {};
         const ethResponse = responses[1] || {};
 
-        setData(gweiData);
+        setData(gweiData.result);
         setEthPrice(ethResponse.current_price);
         setEthChange(ethResponse.price_change_percentage_24h);
       })
@@ -63,7 +63,7 @@ function Home() {
         <div className="flex flex-col md:flex-row w-full justify-around pt-36">
           <GasCard
             speed="Safe Low"
-            value={data.safeLow}
+            value={data.SafeGasPrice}
             time="30"
             ethPrice={ethPrice}
             firstLoading={firstLoading}
@@ -74,7 +74,7 @@ function Home() {
           />
           <GasCard
             speed="Medium"
-            value={data.average}
+            value={data.ProposeGasPrice}
             time="5"
             ethPrice={ethPrice}
             firstLoading={firstLoading}
@@ -85,7 +85,7 @@ function Home() {
           />
           <GasCard
             speed="Fast"
-            value={data.fast}
+            value={data.FastGasPrice}
             time="2"
             ethPrice={ethPrice}
             firstLoading={firstLoading}

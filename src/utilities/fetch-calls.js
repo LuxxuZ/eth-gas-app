@@ -1,6 +1,6 @@
 export async function gweiCall() {
   return await fetch(
-    "https://data-api.defipulse.com/api/v1/egs/api/ethgasAPI.json?api-key=6cce794794066efbf7c860f6300b2b37ca8135d49ab5758a570c3ffb2bcc"
+    "https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=DWRIN7RH51319HBPGM3KWTZ2TU32RE9Y5V"
   )
     .then((res) => res.json())
     .catch((error) => {

@@ -12,7 +12,7 @@ export default function GasCard({
   ethPrice,
   Icon,
 }) {
-  const gweiValue = value / 10;
+  const gweiValue = parseFloat(value);
   const gweiUsd = getGweiUsd({ gWeiCount: gweiValue, ethPrice });
 
   if (firstLoading) {
