@@ -59,8 +59,8 @@ function Home() {
   return (
     <Fragment>
       <Header />
-      <div className="flex flex-col dark:bg-cbodydark w-full py-0 pt-0 justify-center">
-        <div className="flex flex-col md:flex-row min-h-screen justify-around items-center">
+      <div className="flex flex-col dark:bg-cbodydark min-h-screen justify-center items-center py-0 pt-0 ">
+        <div className="flex flex-col md:flex-row w-full justify-around pt-36">
           <GasCard
             speed="Safe Low"
             value={data.safeLow}
@@ -95,8 +95,21 @@ function Home() {
             Icon={IoRocketSharp}
           />
         </div>
-        <div className="absolute flex w-screen bg-red-500 justify-center items-center mt-96">
-          <EthInfo ethPrice={ethPrice} ethChange={ethChange} />
+        <EthInfo
+          ethPrice={ethPrice}
+          ethChange={ethChange}
+          firstLoading={firstLoading}
+        />
+        <div className="pt-24 flex flex-row">
+          <p className="text-lg dark:text-ctwhite">Data provided by</p>
+          <a
+            href="https://www.coingecko.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-lg text-csgreen ml-1"
+          >
+            CoinGecko API
+          </a>
         </div>
       </div>
     </Fragment>

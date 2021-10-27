@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         cgreen: "#219F2D",
+        csgreen: "#9DC64B",
         corange: "#FD9255",
         cblue: "#3F6CE1",
         bcwhite: "#FCFCFC",
