@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
+export const AppBody = styled.div``;
+
 export const MainDiv = styled.div`
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -8,7 +12,8 @@ export const MainDiv = styled.div`
   align-items: center;
   padding-top: 0px;
   padding-bottom: 0px;
-  background-color: ${(props) => props.theme.bg};
+  background-color: ${(props) => props.theme.body.colors.background};
+  transition: all 150ms linear;
 `;
 
 export const CardsDiv = styled.div`
@@ -28,6 +33,7 @@ export const LinksDiv = styled.div`
 export const LinksText = styled.p`
   font-size: 1.125rem;
   line-height: 1.75rem;
+  color: ${(props) => props.theme.body.colors.text_color};
 `;
 
 export const LinksRedirection = styled.a`

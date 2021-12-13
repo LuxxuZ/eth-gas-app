@@ -21,7 +21,6 @@ const rightToLeft = keyframes`
 export const ButtonDiv = styled.div`
   display: flex;
   border-radius: 9999px;
-  border-color: ${(props) => props.borderColor};
   margin-left: auto;
   border-width: 0.125rem;
   width: 4rem;
@@ -30,6 +29,7 @@ export const ButtonDiv = styled.div`
   padding-right: 0.25rem;
   padding-bottom: 0.25rem;
   cursor: pointer;
+  border: 0.125rem ${(props) => props.borderColor} solid;
   background-color: ${(props) => (props.darkMode ? "#d7cee5  " : "#fffccc")};
   transition: all 150ms linear;
   user-select: none;
@@ -47,4 +47,13 @@ export const ButtonToggle = styled.div`
   transform: translateX(${(props) => (props.darkMode ? "100%" : "0%")});
   animation: ${(props) => (props.darkMode ? leftToRight : rightToLeft)} 150ms
     linear;
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: ${(props) => props.theme.toggle_button.sizes.icon_size};
+  height: ${(props) => props.theme.toggle_button.sizes.icon_size};
+  color: ${(props) => props.theme.toggle_button.colors.icon_color};
 `;

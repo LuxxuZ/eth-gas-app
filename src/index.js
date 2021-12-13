@@ -5,16 +5,17 @@ import Home from "./screens/home";
 import reportWebVitals from "./reportWebVitals";
 import { DarkModeProvider } from "./utilities/context-wrapper";
 import { ThemeProvider } from "styled-components";
+import ThemeWrapper from "./ThemeWrapper";
 
 require("dotenv").config();
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <DarkModeProvider>
+    <DarkModeProvider>
+      <ThemeWrapper>
         <Home />
-      </DarkModeProvider>
-    </ThemeProvider>
+      </ThemeWrapper>
+    </DarkModeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

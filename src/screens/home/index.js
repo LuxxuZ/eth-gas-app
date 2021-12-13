@@ -4,6 +4,7 @@ import { TiMinus } from "react-icons/ti";
 import { IoRocketSharp } from "react-icons/io5";
 
 import {
+  AppBody,
   CardsDiv,
   LinksDiv,
   LinksRedirection,
@@ -14,6 +15,7 @@ import Header from "../../components/Header";
 import GasCard from "../../components/GasCard";
 import EthInfo from "../../components/EthInfo";
 import { gweiCall, ethCall } from "../../utilities/fetch-calls";
+import ThemeWrapper from "../../ThemeWrapper";
 
 const RELOAD_DELAY = 20000;
 

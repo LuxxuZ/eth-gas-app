@@ -9,9 +9,11 @@ export const HeaderMainContainer = styled.div`
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-bottom: 1rem;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.body.background};
   width: 100%;
   height: 5rem;
+  color: ${(props) => props.theme.header.colors.logo_color};
+  transition: all 150ms linear;
 `;
 
 export const TitleContainer = styled.div`
@@ -27,8 +29,9 @@ export const LogoDiv = styled.div`
   width: 4rem;
   height: 4rem;
   border-radius: 1rem;
-  background-color: #f3f4f6;
+  background-color: ${(props) => props.theme.header.colors.logo_div};
   font-size: 2rem;
+  transition: all 150ms linear;
 `;
 
 export const Title = styled.h1`

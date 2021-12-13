@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { DarkModeContext } from "../../utilities/context-wrapper";
 import { BiSun } from "react-icons/bi";
 import { FaMoon } from "react-icons/fa";
-import { ButtonDiv, ButtonToggle } from "./styles";
+import { ButtonDiv, ButtonToggle, IconContainer } from "./styles";
 
 export default function ToggleButton() {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
@@ -27,9 +27,13 @@ export default function ToggleButton() {
     >
       <ButtonToggle darkMode={darkMode}>
         {!darkMode ? (
-          <BiSun className=" text-yellow-500 h-4 w-4" />
+          <IconContainer>
+            <BiSun />
+          </IconContainer>
         ) : (
-          <FaMoon className="text-purple-400 h-3 w-3" />
+          <IconContainer>
+            <FaMoon />
+          </IconContainer>
         )}
       </ButtonToggle>
     </ButtonDiv>

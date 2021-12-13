@@ -4,6 +4,7 @@ export const InfoDiv = styled.div`
   display: flex;
   flex-direction: row;
   padding-top: 3rem;
+  transition: all 150ms linear;
 `;
 
 export const EthPriceText = styled.p`
@@ -11,6 +12,7 @@ export const EthPriceText = styled.p`
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
+  color: ${(props) => props.theme.gas_card.colors.main_text};
 `;
 
 export const EthImg = styled.img`
@@ -34,7 +36,7 @@ export const LoadingDiv = styled.div`
 `;
 
 export const LoadingEth = styled.div`
-  background-color: #e5e7eb;
+  background-color: ${(props) => props.theme.gas_card.colors.loading_bg};
   height: 1.75rem;
   width: 11rem;
   border-radius: 9999px;

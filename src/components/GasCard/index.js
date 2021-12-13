@@ -67,7 +67,7 @@ export default function GasCard({
   }
 
   return (
-    <MainContainer theme={darkMode}>
+    <MainContainer>
       <MainContentDiv>
         <SpeedDiv>
           <CardSpeedH1>{speed}</CardSpeedH1>

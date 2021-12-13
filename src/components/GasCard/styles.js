@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 24rem;
-  height: 14rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-left: 2rem;
+  background-color: ${(props) => props.theme.gas_card.colors.background};
+  border: 0.0625rem ${(props) => props.theme.gas_card.colors.border_color} solid;
   border-radius: 0.5rem;
-  border-width: 1px;
-  border-color: #d7d7d7;
-  background-color: white;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.18);
-  transition: all 250ms linear;
+  box-shadow: ${(props) => props.theme.gas_card.shadow.card_shadow};
+  /* 
+  width: 24rem;
+  transition: all 150ms linear; 
+  */
 `;
 
 export const MainContentDiv = styled.div`
@@ -25,33 +25,38 @@ export const SpeedDiv = styled.div`
   flex-direction: column;
 `;
 
-export const CardSpeedH1 = styled.h1`
+export const CardSpeedH1 = styled.p`
   font-size: 1.25rem;
   line-height: 1.75rem;
-  color: #0f0f0f;
+  color: ${(props) => props.theme.gas_card.colors.main_text};
   user-select: none;
+  /* 
+  */
 `;
 
 export const GweiContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding-top: 1rem;
   align-items: flex-end;
+  /* 
+  margin: 0; */
 `;
 
 export const GweiText = styled.p`
   font-size: 3rem;
+  /* 
   line-height: 1;
   font-weight: 700;
-  color: ${(props) => props.TextColor};
+  color: ${(props) => props.TextColor}; 
+  */
 `;
 
 export const GweiParraf = styled.p`
-  padding-left: 0.25rem;
+  /* padding-left: 0.25rem;
   font-size: 1.5rem;
   line-height: 2rem;
-  color: #3a3a3a;
-  user-select: none;
+  color: ${(props) => props.theme.gas_card.colors.secondary_text};
+  user-select: none; */
 `;
 
 export const IconDiv = styled.div`
@@ -72,31 +77,32 @@ export const IconCircle = styled.div`
 `;
 
 export const IconContainer = styled.div`
+  display: flex;
   font-size: 2.25rem;
   color: ${(props) => props.TextColor};
 `;
 
 export const StatsDiv = styled.div`
-  padding-top: 1rem;
+  /* padding-top: 0.5rem; */
 `;
 
 export const StatsText = styled.p`
-  font-size: 1rem;
+  /* font-size: 1rem;
   line-height: 1.5rem;
-  color: #3a3a3a;
-  user-select: none;
+  color: ${(props) => props.theme.gas_card.colors.main_text};
+  user-select: none; */
 `;
 
 export const TimeText = styled.p`
-  font-size: 1.125rem;
+  /* font-size: 1.125rem;
   line-height: 1.75rem;
-  color: 0f0f0f;
+  color: ${(props) => props.theme.gas_card.colors.secondary_text}; */
 `;
 
 //LOADING STYLES
 
 export const MainLoadingDiv = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   width: 24rem;
   height: 14rem;
@@ -104,69 +110,70 @@ export const MainLoadingDiv = styled.div`
   padding-left: 2rem;
   border-radius: 0.5rem;
   border-width: 1px;
-  border-color: #d7d7d7;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.18);
-  background-color: #ffffff;
+  border-color: ${(props) => props.theme.gas_card.colors.border_color};
+  box-shadow: ${(props) => props.theme.gas_card.shadow.card_shadow};
+  background-color: ${(props) => props.theme.gas_card.colors.background};
+  transition: all 150ms linear; */
 `;
 
 export const MainLoadingContentDiv = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; */
 `;
 
 export const ContentLoadingDiv = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; */
 `;
 
 export const CardSpeedContainer = styled.div`
-  background-color: #e5e7eb;
+  /* background-color: ${(props) => props.theme.gas_card.colors.loading_bg};
   height: 1.5rem;
   width: 4rem;
-  border-radius: 9999px;
+  border-radius: 9999px; */
 `;
 
 export const GweiTextLoading = styled.div`
-  width: 4rem;
+  /* width: 4rem;
   height: 3.5rem;
-  background-color: #e5e7eb;
-  border-radius: 1rem;
+  background-color: ${(props) => props.theme.gas_card.colors.loading_bg};
+  border-radius: 1rem; */
 `;
 
 export const GweiParrafLoading = styled.div`
-  width: 5rem;
+  /* width: 5rem;
   height: 1.75rem;
-  background-color: #e5e7eb;
+  background-color: ${(props) => props.theme.gas_card.colors.loading_bg};
   border-radius: 9999px;
-  margin-left: 0.25rem;
+  margin-left: 0.25rem; */
 `;
 
 export const IconLoadingDiv = styled.div`
-  display: flex;
+  /* display: flex;
   border-radius: 9999px;
   width: 4rem;
   height: 4rem;
-  background-color: #e5e7eb;
+  background-color: ${(props) => props.theme.gas_card.colors.loading_bg}; */
 `;
 
 export const StatsLoadingDiv = styled.div`
-  padding-top: 1rem;
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  /* padding-top: 1rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; */
 `;
 
 export const StatsTextLoading = styled.div`
-  width: 4rem;
+  /* width: 4rem;
   height: 1.5rem;
-  background-color: #e5e7eb;
-  border-radius: 9999px;
+  background-color: ${(props) => props.theme.gas_card.colors.loading_bg};
+  border-radius: 9999px; */
 `;
 
 export const TimeTextLoading = styled.div`
-  width: 11rem;
+  /* width: 11rem;
   height: 1.5rem;
-  background-color: #e5e7eb;
+  background-color: ${(props) => props.theme.gas_card.colors.loading_bg};
   border-radius: 9999px;
-  margin-top: 0.25rem;
+  margin-top: 0.25rem; */
 `;
