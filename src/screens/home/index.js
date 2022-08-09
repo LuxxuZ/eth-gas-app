@@ -3,13 +3,8 @@ import { GiSnail } from "react-icons/gi";
 import { TiMinus } from "react-icons/ti";
 import { IoRocketSharp } from "react-icons/io5";
 
-import {
-  CardsDiv,
-  LinksDiv,
-  LinksRedirection,
-  LinksText,
-  MainDiv,
-} from "./styles";
+import "./styles.css";
+
 import Header from "../../components/Header";
 import GasCard from "../../components/GasCard";
 import EthInfo from "../../components/EthInfo";
@@ -64,8 +59,8 @@ function Home() {
   return (
     <Fragment>
       <Header />
-      <MainDiv>
-        <CardsDiv>
+      <div className="flex flex-col dark:bg-cbodydark min-h-screen justify-center items-center py-0 pt-0 ">
+        <div className="flex flex-col md:flex-row w-full justify-around pt-36">
           <GasCard
             speed="Safe Low"
             value={data.SafeGasPrice}
@@ -73,8 +68,8 @@ function Home() {
             ethPrice={ethPrice}
             firstLoading={firstLoading}
             fetching={fetching}
-            color="#3F6CE1"
-            softColor="#DAE3FA"
+            color="text-cblue"
+            softColor="bg-csoftblue"
             Icon={GiSnail}
           />
           <GasCard
@@ -84,8 +79,8 @@ function Home() {
             ethPrice={ethPrice}
             firstLoading={firstLoading}
             fetching={fetching}
-            color="#219F2D"
-            softColor="#AEF2B4"
+            color="text-cgreen"
+            softColor="bg-csoftgreen"
             Icon={TiMinus}
           />
           <GasCard
@@ -95,27 +90,28 @@ function Home() {
             ethPrice={ethPrice}
             firstLoading={firstLoading}
             fetching={fetching}
-            color="#FD9255"
-            softColor="#FAD9C7"
+            color="text-corange"
+            softColor="bg-csoftorange"
             Icon={IoRocketSharp}
           />
-        </CardsDiv>
+        </div>
         <EthInfo
           ethPrice={ethPrice}
           ethChange={ethChange}
           firstLoading={firstLoading}
         />
-        <LinksDiv>
-          <LinksText>Data provided by</LinksText>
-          <LinksRedirection
+        <div className="pt-24 flex flex-row">
+          <p className="text-lg dark:text-ctwhite">Data provided by</p>
+          <a
             href="https://www.coingecko.com/"
             target="_blank"
             rel="noreferrer"
+            className="text-lg text-csgreen ml-1"
           >
             CoinGecko API
-          </LinksRedirection>
-        </LinksDiv>
-      </MainDiv>
+          </a>
+        </div>
+      </div>
     </Fragment>
   );
 }

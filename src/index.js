@@ -3,18 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Home from "./screens/home";
 import reportWebVitals from "./reportWebVitals";
-import { DarkModeProvider } from "./utilities/context-wrapper";
-import { ThemeProvider } from "styled-components";
 
 require("dotenv").config();
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <DarkModeProvider>
-        <Home />
-      </DarkModeProvider>
-    </ThemeProvider>
+    <Home />
   </React.StrictMode>,
   document.getElementById("root")
 );
