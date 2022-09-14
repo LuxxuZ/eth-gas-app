@@ -60,7 +60,7 @@ function Home() {
     <Fragment>
       <Header />
       <div className="flex flex-col dark:bg-cbodydark min-h-screen justify-center items-center py-0 pt-0 ">
-        <div className="flex flex-col md:flex-row w-full justify-around pt-36">
+        <div className="flex flex-col md:flex-row w-full md:justify-around justify-center items-center pt-36">
           <GasCard
             speed="Safe Low"
             value={data.SafeGasPrice}

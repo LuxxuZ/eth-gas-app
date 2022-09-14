@@ -17,7 +17,7 @@ export default function GasCard({
 
   if (firstLoading) {
     return (
-      <div className="bg-tcwhite dark:bg-chgdark flex md:flex-col flex-row w-96 h-56 rounded-lg shadow-csw dark:shadow-none border border-cbwhite dark:border-transparent pt-8 pl-8">
+      <div className="bg-tcwhite dark:bg-chgdark flex flex-col  md:w-28p w-90p max-w-sm h-56 my-3 rounded-lg shadow-csw dark:shadow-none border border-cbwhite dark:border-opacity-25 dark:border-gray-900 pt-8 pl-8">
         <div className="flex flex-row animate-pulse">
           <div className="flex flex-col">
             <div className="bg-gray-200 dark:bg-loadingdark h-6 w-16 rounded-full"></div>
@@ -41,7 +41,7 @@ export default function GasCard({
   }
 
   return (
-    <div className="bg-tcwhite dark:bg-chgdark flex md:flex-col flex-row w-96 h-56 rounded-lg shadow-csw dark:shadow-none border border-cbwhite dark:border-opacity-25 dark:border-gray-900 pt-8 pl-8">
+    <div className="bg-tcwhite dark:bg-chgdark flex flex-col  md:w-28p w-90p max-w-sm h-56 my-3 rounded-lg shadow-csw dark:shadow-none border border-cbwhite dark:border-opacity-25 dark:border-gray-900 pt-8 pl-8">
       <div className="flex flex-row">
         <div className="flex flex-col">
           <h1 className="text-xl text-ctblack dark:text-ctwhite select-none">

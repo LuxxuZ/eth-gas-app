@@ -3,14 +3,23 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      minWidth: {
+        86: "240px",
+      },
       margin: {
         "50p": "50%",
+      },
+      width: {
+        90: "21.875rem", //350px
+        "28p": "28%",
+        "90p": "90%",
       },
       boxShadow: {
         hsw: "0 3px 40px 0 rgba(0, 0, 0, 0.1)",
         csw: "0 4px 15px 0 rgba(0, 0, 0, 0.18)",
         nsw: "0 2px 2px rgba(0, 0, 0, 0.25)",
       },
+
       colors: {
         cgreen: "#219F2D",
         csgreen: "#9DC64B",
